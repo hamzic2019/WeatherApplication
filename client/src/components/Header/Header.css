@@ -1,0 +1,71 @@
+.headerWrapper {
+    background-color: tomato;
+    height: 150px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerWrapper input {
+    width: 600px;
+    height: 70px;   
+    padding: 5px 0 5px 15px;
+    border:0px;
+
+    font-size: 2em;
+
+    outline: none;
+
+    color:rgba(75, 75, 75, 0.7);
+}
+
+.headerWrapper input::placeholder {
+    color:rgba(75, 75, 75, 0.7);
+  }
+
+.headerWrapper button {
+    width: 280px;
+    height: 70px;
+    border:0px;
+    font-size: 2em;
+    font-weight: 900;
+
+    background-color: steelblue;
+    color:white;
+}
+
+.headerWrapper button:hover {
+    background-color: rgb(50, 107, 154);
+    color:white;
+}
+
+.headerWrapper button:active {
+    background-color: rgb(22, 67, 103);
+    color:white;
+}
+
+
+@media screen and (max-width: 900px) {
+    /* CSS rules go here */
+    .headerWrapper {
+        padding: 10px;
+        justify-content: space-around;
+        flex-direction: column;
+        height: 150px;
+    }
+
+    .headerWrapper input {
+        width: 100%;
+        height: 40%;
+        font-size: 1.2em;
+    }
+
+    .headerWrapper button {
+        width: 100%;
+        height: 40%;
+        font-size: 1.2em;
+    }
+
+}
+  

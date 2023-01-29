@@ -1,0 +1,30 @@
+.displayWrapper {
+    background-color: #3498db;
+    padding: 50px 0;
+    width: 50%;
+    margin-inline:auto;
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+
+    margin: 2% auto;
+
+    border-radius: 50px;
+}
+
+.displayWrapperH1 {
+    font-size: 4em;
+    font-weight: 900;
+    color: white;
+}
+
+.displayWrapperIcon {
+    height:150px;
+}
+
+.displayWrapperCurrentTemp {
+    color:white;
+    font-size: 4em;
+}

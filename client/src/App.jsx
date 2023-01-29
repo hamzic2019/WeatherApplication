@@ -1,14 +1,17 @@
-import React, {useState} from 'react'
+import React, {useState, memo} from 'react'
 import {useQuery} from '@tanstack/react-query';
 import Axios from 'axios';
+import './App.css';
+import Header from './components/Header/Header';
+import Display from './components/Display/Display';
 
-// `
 
 const App = () => {
   const [city, setCity] = useState('Sarajevo');
   const [temp, setTemp] = useState('');
+  const [info, setInfo] = useState({});
 
-  const {data, refetch, isLoading, status, isFetching} = useQuery(
+  const {data, refetch, isLoading, status, isFetching, error} = useQuery(
     ["forcast", city],
     () => {
       return Axios.get(`https://weatherapplication-hamzic2019.onrender.com/forcast?city=${city}`)
@@ -18,23 +21,13 @@ const App = () => {
     }
   ) 
 
-
   return (
-    <div>
-      <input 
-        type="text" 
-        placeholder='Enter a city' 
-        value={temp}
-        onChange={(e) => setTemp(e.target.value)}
-      />
-      <button onClick={() => {
-          setCity(temp)
-          //refetch()
-      }}>GET FORCASTs</button>
-      <hr />
-      <h2>Current temperature: {data?.temp}</h2>
+    <div className='appWrapper'>
+      <Header temp={temp} setCity={setCity} setTemp={setTemp} />
+      
+      <Display data={data} />
     </div>
   )
 }
 
-export default App
+export default memo(App)
