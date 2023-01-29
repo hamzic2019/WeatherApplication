@@ -6,7 +6,7 @@ const cors = require('cors');
 const path = require('path');
 
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: 'http://localhost:4173',
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
@@ -32,6 +32,7 @@ app.get('/forcast', async(req, res) => {
             city: data.name
         }
 
+        console.log('Lets see');
         res.status(200).send({...weatherData});
 
     } catch(e) {
