@@ -42,7 +42,7 @@ app.get('/forcast', async(req, res) => {
 
 
 app.get('/', (req, res) => {
-    res.status(200).send({hi: 'there'});
+    res.status(200).send({hi: 'OH LORD'});
 })
 
 
