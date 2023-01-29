@@ -13,6 +13,8 @@ const App = () => {
     () => {
       return Axios.get(`https://weatherapplication-hamzic2019.onrender.com/forcast?city=${city}`)
                   .then(res => res.data);
+    },{
+      refetchOnWindowFocus: false
     }
   ) 
 

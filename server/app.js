@@ -14,8 +14,6 @@ app.use(cors({
 
 const PORT = process.env.PORT || 3000;
 
-// ICON URL
-// https://openweathermap.org/img/wn/13d.png
 
 app.get('/forcast', async(req, res) => {
     try {
@@ -32,18 +30,12 @@ app.get('/forcast', async(req, res) => {
             city: data.name
         }
 
-        console.log('Lets see');
         res.status(200).send({...weatherData});
 
     } catch(e) {
         res.status(400).send({msg: 'Something went wrong!', e});
     }
 });
-
-
-app.get('/', (req, res) => {
-    res.status(200).send({hi: 'OH LORD'});
-})
 
 
 app.listen(PORT, () =>{
