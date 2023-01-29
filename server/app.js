@@ -41,6 +41,11 @@ app.get('/forcast', async(req, res) => {
 });
 
 
+app.get('/', (req, res) => {
+    res.status(200).send({hi: 'there'});
+})
+
+
 app.listen(PORT, () =>{
     console.log(`Application is up and running on port: ${PORT}`);
 });
