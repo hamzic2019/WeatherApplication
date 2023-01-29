@@ -6,7 +6,7 @@ const cors = require('cors');
 const path = require('path');
 
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: 'https://spiffy-dodol-d0a081.netlify.app',
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
