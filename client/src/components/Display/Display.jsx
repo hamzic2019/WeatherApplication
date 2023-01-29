@@ -7,7 +7,7 @@ const Display = ({data}) => {
     <div className='displayWrapper'>
         <h1 className='displayWrapperH1'>Today Forcast</h1>
         <img 
-            src={`http://openweathermap.org/img/wn/${data?.icon}@4x.png`} 
+            src={`//openweathermap.org/img/wn/${data?.icon}@4x.png`} 
             alt="Weather icon" 
             className='displayWrapperIcon'
         />
