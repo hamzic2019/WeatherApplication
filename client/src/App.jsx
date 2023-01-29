@@ -27,8 +27,8 @@ const App = () => {
       />
       <button onClick={() => {
           setCity(temp)
-          refetch()
-      }}>GET FORCAST</button>
+          //refetch()
+      }}>GET FORCASTs</button>
       <hr />
       <h2>Current temperature: {data?.temp}</h2>
     </div>
